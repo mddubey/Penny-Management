@@ -2,4 +2,13 @@
 *.class
 *.tar
 build
+
+# Idea
+
 .idea/
+*.iml
+*.ipr
+*.iws
+
+
+
