@@ -1,6 +1,20 @@
 group 'org.vellas.gareebs'
 version '1.0-SNAPSHOT'
 
+buildscript {
+    ext {
+        springBootVersion = '1.4.1.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+apply plugin: 'spring-boot'
+
 apply plugin: 'application'
 apply plugin: 'java'
 apply plugin: 'idea'
