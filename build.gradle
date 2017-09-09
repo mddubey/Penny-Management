@@ -32,17 +32,17 @@ repositories {
 * no main manifest attribute, in build/libs/SplitWise.jar
 */
 jar {
-    baseName = penny-management
+    baseName = 'penny-management'
     manifest {
         attributes('Main-Class': mainClassName)
     }
 }
 
 dependencies {
-    compile("org.springframework.boot:spring-boot-starter-web")
+    compile group: 'org.springframework.boot', name: 'spring-boot-autoconfigure', version: '1.4.7.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '1.5.6.RELEASE'
 
     testCompile group: 'junit', name: 'junit', version: '4.12'
-    testCompile group: 'com.jayway.restassured', name: 'spring-mock-mvc', version: '2.2.0'
-    testCompile 'io.rest-assured:rest-assured:3.0.2'
+    testCompile group: 'org.springframework', name: 'spring-test', version: '4.3.10.RELEASE'
 }
 

@@ -9,7 +9,6 @@ import java.util.HashMap;
 
 @RestController
 public class HealthController {
-
     @RequestMapping("/health")
     public ResponseEntity ok() {
         HashMap<String, String> map = new HashMap<>();
