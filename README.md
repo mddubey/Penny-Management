@@ -31,7 +31,7 @@ Development
 -----------
 
 To run: 
-```./gradlew build && java -jar build/libs/service.SplitWise.jar 1```
+```./gradlew bootRun ```
 
 Learning
 ----

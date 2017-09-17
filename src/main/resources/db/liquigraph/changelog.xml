@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<changelog xmlns="https://fbiville.github.io/liquigraph/schema/1.0/liquigraph.xsd">
+    <changeset id="17092017-1621" author="raj,dubey">
+        <!-- 1 to n queries: all executed in 1 transaction -->
+        <query>CREATE (m:Person) RETURN m</query>
+    </changeset>
+</changelog>

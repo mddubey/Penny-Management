@@ -2,8 +2,6 @@ package com.vellas.gareebs.service;
 
 import com.vellas.gareebs.model.Coordinator;
 import com.vellas.gareebs.model.Transaction;
-import com.vellas.gareebs.service.Person;
-import com.vellas.gareebs.service.SplitWise;
 import com.vellas.gareebs.util.Util;
 import org.junit.Before;
 import org.junit.Test;
@@ -12,13 +10,13 @@ import java.text.ParseException;
 
 import static org.junit.Assert.assertEquals;
 
-public class SplitWiseTest {
-    private SplitWise splitWise;
+public class ExpenseDashboardTest {
+    private ExpenseDashboard expenseDashboard;
     private Person raj = new Person("Raj");
 
     @Before
     public void setUp() {
-//         splitWise = new service.SplitWise();
+//         expenseDashboard = new service.ExpenseDashboard();
 
     }
 
@@ -39,11 +37,11 @@ public class SplitWiseTest {
         peopleManager.add(hemant);
         raj.add(new Transaction(100, Util.getDate("21/07/2014")));
         hemant.spend(new Transaction(600, Util.getDate("21/07/2014")));
-        SplitWise splitWise = new SplitWise(peopleManager);
+        ExpenseDashboard expenseDashboard = new ExpenseDashboard(peopleManager);
 
-        assertEquals(-100 ,splitWise.dues(raj));
-        assertEquals(-200 ,splitWise.dues(aakash));
-        assertEquals(400 ,splitWise.dues(hemant));
+        assertEquals(-100 , expenseDashboard.dues(raj));
+        assertEquals(-200 , expenseDashboard.dues(aakash));
+        assertEquals(400 , expenseDashboard.dues(hemant));
 
     }
 
@@ -60,15 +58,15 @@ public class SplitWiseTest {
         hemant.spend(new Transaction(400, Util.getDate("21/07/2014")));
         hemant.spend(new Transaction(200, Util.getDate("21/07/2014")));
 
-        int expense = new SplitWise(peopleManager).expensePerPerson();
+        int expense = new ExpenseDashboard(peopleManager).expensePerPerson();
         assertEquals(200, expense);
     }
 
     @Test
     public void testAddPerson() {
-//        splitWise.addPerson(raj);
+//        expenseDashboard.addPerson(raj);
 //
-//        assertEquals(1, splitWise.people.size());
+//        assertEquals(1, expenseDashboard.people.size());
     }
 
 }
